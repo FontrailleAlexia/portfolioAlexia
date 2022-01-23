@@ -1,0 +1,71 @@
+<template>
+  <div class="presentation" id="presentation">
+    <h1>A propos</h1>
+
+    <div class="presentation_txt_img">
+      <div class="text_presentation">
+        <p>Passionnée par l'informatique depuis plusieurs années
+        je me suis reconverti dans le web en effectuant une formation au sein
+        de l'école OClock. Au début de la formation j'ai appris les bases du
+        développement web pour ensuite effectuer une spécialité Symfony et une 
+        spécialité Wordpress.</p>
+
+        <p>Pour plus de renseignements n'hésitez pas à me contacter en cliquant
+        <router-link to="/contact#contact">ici</router-link></p>
+      </div>
+      <div class="presentation_img">
+        <img src="../assets/img/picture_me.jpg" alt="" class="img_presentation">
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Home',
+  props: {
+    msg: String
+  }
+}
+
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+
+.presentation {
+  background-color: #FFC7D8;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.presentation_txt_img {
+  display: flex;
+  margin: 0 10rem;
+}
+
+.text_presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  margin: 0 4rem 0 0;
+
+  p {
+    font-size: 20px;
+  }
+}
+
+.img_presentation {
+  border-radius: 50%;
+}
+
+h1 {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+</style>

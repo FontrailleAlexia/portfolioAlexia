@@ -1,9 +1,10 @@
 <template>
   <div class="contact" id="contact">
-  <p>contact</p>
-
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque sapiente quam dignissimos possimus earum odit maxime minima et, dolorum a ea itaque qui delectus, saepe, sit culpa labore deleniti obcaecati velit repudiandae voluptatum rerum iste error. Quos tempore veritatis doloremque placeat alias, error ut, totam distinctio, aperiam magnam ea porro explicabo enim fugit velit dicta impedit aliquam aut facere animi similique! Aliquid reprehenderit earum voluptatum ratione magni eos minima natus fugiat molestias voluptatibus error dolor pariatur libero accusantium, nulla delectus animi consectetur corrupti. Voluptate veritatis aliquid pariatur dolor dolore perferendis architecto quae tempore, minima deserunt nihil culpa voluptatibus molestias animi quia, officiis quaerat ullam repellat! Incidunt, inventore. Aspernatur cumque sequi nostrum, beatae impedit quod in, praesentium quia iusto provident, optio numquam officia odit.
-</p>
+    <p>
+      <font-awesome-icon icon="fa-solid fa-bookmark" class="fabookmark"/> 
+        Contact 
+      <font-awesome-icon icon="fa-solid fa-bookmark" class="fabookmark"/>
+    </p>
   </div>
 </template>
 
@@ -18,5 +19,15 @@ export default {
 .contact {
   background-color: #FFEAF1;
   font-size: 50px;
+  padding: 30px; 
+
+  p {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Dosis', sans-serif;
+    .fabookmark {
+      color: rgb(252, 55, 170);
+    }
+  }
 }
 </style>

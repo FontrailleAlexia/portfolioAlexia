@@ -12,6 +12,14 @@
       <li><img :src="tab.img" class="img_competences" /></li>
 
     </ul>
+
+    <!--<img src="../assets/img/css.webp" alt="">
+    <img src="../assets/img/html.webp" alt="">
+    <img src="../assets/img/symfony.png" alt="">
+    <img src="../assets/img/vuejs.png" alt="">
+    <img src="../assets/img/wordpress.webp" alt="">
+    <img src="../assets/img/php.png" alt="">-->
+
     
   </div>
 </template>

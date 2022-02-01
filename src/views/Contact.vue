@@ -6,34 +6,23 @@
       <font-awesome-icon icon="fa-solid fa-bookmark" class="fabookmark"/>
     </p>
 
-    <div class="login-box">
-      <form action="" class="form">
-        <div class="lastname_firstname">
-          <div class="user-box">
-            <input type="text" name="lastname" required="">
-            <label>Nom</label>
-          </div>
-          <div class="user-box">
-            <input type="text" name="firstname" required="">
-            <label>Prénom</label>
-          </div>
-        </div>
-        <div class="user-box user-box-mail">
-          <input type="text" name="mail" required="">
-          <label>Email</label>
-        </div>
-        <div class="user-box user-box-message">
-          <input type="textarea" name="message" required="">
-          <label>Message</label>
-        </div>
-        <a href="#">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Submit
-        </a>
+    <div class="container">
+      <form >
+        <input type="text" name="lastname" placeholder="Nom">
+        <input type="text" name="firstname" placeholder="Prénom">
+        <input type="email" name="mail" placeholder="Email">
+        <input type="textarea" name="message" placeholder="Message" class="box_textarea">
+
+        <input type="button" value="Envoyer"><br>
       </form>
+
+      <div class="drops">
+        <div class="drop drop-1"></div>
+        <div class="drop drop-2"></div>
+        <div class="drop drop-3"></div>
+        <div class="drop drop-4"></div>
+        <div class="drop drop-5"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -68,163 +57,156 @@ export default {
 /***********************************
 **            FORM                **
 ************************************/
-.login-box {
+$white: rgba(255, 255, 255, 0.3);
+
+.container {
   display: flex;
- justify-content: center;
+  justify-content: center;
+  padding-top: 2rem;
 }
 
-.form  {
- background-color: lightblue;
-}
-
-.form .user-box-mail, .form .user-box-message {
-  background-color: red;
-}
-
-.lastname_firstname .user-box input {
-  width: 20px;
-}
-
-.lastname_firstname {
+form {
   display: flex;
-}
-
-.login-box .user-box {
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  height: 320px;
+  border-radius: 20px;
+  border-left: 1px solid $white;
+  border-top: 1px solid $white;
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
   position: relative;
+  transition: all 0.2s ease-in-out;
   width: 300px;
+  background: linear-gradient(45deg, #FA739D, #FFC7D8);
+  
+  p {
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  input {
+    background: transparent;
+    width: 200px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid $white;
+    border-top: 1px solid $white;
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    
+    &:hover {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+    }
+    
+    &[type="email"],
+    &[type="text"],
+    &[type="textarea"]
+    {
+      &:focus {
+        background: rgba(255,255,255,0.1);
+        box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+      }
+    }
+    
+    &[type="button"] {
+      margin-top: 10px;
+      width: 150px;
+      font-size: 1rem;
+      
+      &:hover {
+        cursor: pointer;
+      }
+      
+      &:active {
+        background: rgba(255,255,255,0.2);
+      }
+    }
+  }
+  
+  &:hover {
+    margin: 4px;
+  }
 }
 
-.login-box .user-box input {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
-  color: rgb(0, 0, 0);
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid rgb(0, 0, 0);
-  outline: none;
-  background: transparent;
+::placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
-.login-box .user-box label {
+
+.box_container {
+  width: 500px;
+}
+
+.drop {
+  background: $white;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border-left: 1px solid $white;
+  border-top: 1px solid $white;
+  box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
   position: absolute;
-  top:0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: rgb(0, 0, 0);
-  pointer-events: none;
-  transition: .5s;
-}
-
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
-  top: -20px;
-  left: 0;
-  color: #ff38de;
-  font-size: 12px;
-}
-
-.login-box form a {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #ff38de;
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: .5s;
-  margin-top: 40px;
-  letter-spacing: 4px
-}
-
-.login-box a:hover {
-  background: #ff38de;
-  color: rgb(0, 0, 0);
-  border-radius: 5px;
-  box-shadow: 0 0 5px #ff38de,
-              0 0 25px #ff38de,
-              0 0 50px #ff38de,
-              0 0 100px #ff38de;
-}
-
-.login-box a span {
-  position: absolute;
-  display: block;
-}
-
-.login-box a span:nth-child(1) {
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #ff38de);
-  animation: btn-anim1 1s linear infinite;
-}
-
-@keyframes btn-anim1 {
-  0% {
-    left: -100%;
+  transition: all 0.2s ease;
+  
+  &-1 {
+    height: 80px;
+    width: 80px;
+    top: -20px;
+    left: -40px;
+    z-index: -1;
   }
-  50%,100% {
-    left: 100%;
+  
+  &-2 {
+    height: 80px;
+    width: 80px;
+    bottom: -30px;
+    right: -10px;
+  }
+  
+  &-3 {
+    height: 100px;
+    width: 100px;
+    bottom: 120px;
+    right: -50px;
+    z-index: -1;
+  }
+  
+  &-4 {
+    height: 120px;
+    width: 120px;
+    top: -60px;
+    right: -60px;
+  }
+  
+  &-5 {
+    height: 60px;
+    width: 60px;
+    bottom: 170px;
+    left: 90px;
+    z-index: -1;
   }
 }
 
-.login-box a span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent, #ff38de);
-  animation: btn-anim2 1s linear infinite;
-  animation-delay: .25s
-}
-
-@keyframes btn-anim2 {
-  0% {
-    top: -100%;
-  }
-  50%,100% {
-    top: 100%;
-  }
-}
-
-.login-box a span:nth-child(3) {
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, #ff38de);
-  animation: btn-anim3 1s linear infinite;
-  animation-delay: .5s
-}
-
-@keyframes btn-anim3 {
-  0% {
-    right: -100%;
-  }
-  50%,100% {
-    right: 100%;
-  }
-}
-
-.login-box a span:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg, transparent, #ff38de);
-  animation: btn-anim4 1s linear infinite;
-  animation-delay: .75s
-}
-
-@keyframes btn-anim4 {
-  0% {
-    bottom: -100%;
-  }
-  50%,100% {
-    bottom: 100%;
-  }
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
 </style>

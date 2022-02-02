@@ -140,6 +140,10 @@ form {
     margin-bottom: 60px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
   }
+
+  input[type="submit"] {
+    cursor: pointer;
+  }
   
   input {
     border-radius: 5000px;

@@ -39,6 +39,14 @@ export default {
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 
+@media screen and (max-width: 1037px) {
+  .presentation_txt_img {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 0;
+  }
+}
+
 .home {
   background-color: #C89F9C;
   font-size: 50px;
@@ -48,6 +56,7 @@ export default {
     text-align: center;
     text-transform: uppercase;
     font-family: 'Dosis', sans-serif;
+    margin-bottom: 3rem;
     .fabookmark {
       color: #B36A5E;
     }
@@ -76,7 +85,7 @@ export default {
   border-radius: 2rem;
   height: 100%;
   padding: 2rem;
-  margin-top: 12rem;
+ 
 
   &:hover {
     box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);

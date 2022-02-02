@@ -8,6 +8,7 @@
       <Competences />
       <Contact />
 
+      <Footer />
       <Reset />
     </div>
     <router-view/>
@@ -20,6 +21,8 @@ import Home from "./views/Home.vue";
 import Realisation from "./views/Realisation.vue";
 import Competences from "./views/Competences.vue";
 import Contact from "./views/Contact.vue";
+import Footer from "./components/Footer.vue";
+
 
 
 import Reset from "./assets/css/reset.css";
@@ -33,6 +36,7 @@ export default {
       Realisation,
       Competences,
       Contact,
+      Footer,
       Reset
     }
 }

@@ -85,7 +85,7 @@ export default {
 }
 
 .contact {
-  background-color: #FFEAF1;
+  background-color: #EED7C5;
   font-size: 50px;
   padding: 30px; 
 
@@ -94,7 +94,7 @@ export default {
     text-transform: uppercase;
     font-family: 'Dosis', sans-serif;
     .fabookmark {
-      color: rgb(252, 55, 170);
+      color: #B36A5E;
     }
   }
 }
@@ -129,7 +129,7 @@ form {
   position: relative;
   transition: all 0.2s ease-in-out;
   width: 300px;
-  background: linear-gradient(45deg, #FA739D, #FFC7D8);
+  background: linear-gradient(45deg, #CA7C5C, #C89F9C);
   
   p {
     font-weight: 500;
@@ -159,7 +159,7 @@ form {
     border-top: 1px solid $white;
     backdrop-filter: blur(5px);
     box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
-    color: #fff;
+    color: black;
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     transition: all 0.2s ease-in-out;
@@ -203,7 +203,7 @@ form {
 ::placeholder {
   font-family: Montserrat, sans-serif;
   font-weight: 400;
-  color: #fff;
+  color: black;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 

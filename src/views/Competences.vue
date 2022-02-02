@@ -52,7 +52,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 .competences {
-  background-color: #FFC7D8;
+  background-color: #C89F9C;
   font-size: 50px;
   padding: 30px;
 
@@ -61,7 +61,7 @@ export default {
     text-transform: uppercase;
     font-family: 'Dosis', sans-serif;
     .fabookmark {
-      color: rgb(252, 55, 170);
+      color: #B36A5E;
     }
   }
 }

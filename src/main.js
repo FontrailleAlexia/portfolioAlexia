@@ -6,14 +6,14 @@ import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 /* import specific icons */
-import { faBookmark } from '@fortawesome/free-solid-svg-icons'
-
+import { faBookmark, faEnvelope, faPhone, faCopyright } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* add icons to the library */
-library.add(faBookmark)
+library.add(faBookmark, faGithub, faLinkedin, faEnvelope, faPhone, faCopyright)
 
 /* add font awesome icon component */
 Vue.component('font-awesome-icon', FontAwesomeIcon)

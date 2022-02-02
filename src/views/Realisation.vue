@@ -23,7 +23,7 @@ export default {
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 .realisation {
-  background-color: #FFEAF1;
+  background-color: #EED7C5;
   font-size: 50px;
   padding: 30px; 
 
@@ -34,7 +34,7 @@ export default {
     padding-bottom: 2rem;
 
     .fabookmark {
-      color: rgb(252, 55, 170);
+      color: #B36A5E;
     }
   }
 }

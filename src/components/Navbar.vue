@@ -47,7 +47,7 @@ export default {
 }
 
 .navbar {
-  background-color: #FA739D;
+  background-color: #CA7C5C;
 }
 
 .navbar_title {
@@ -112,7 +112,7 @@ export default {
       padding: 2rem 1rem;
 
       .link {
-        --fill-color: #FFB8CE;
+        --fill-color: #EED7C5;
         position: relative;
         display: block;
         padding: 4px 0;
@@ -147,40 +147,13 @@ export default {
 **          POUR ECRAN MOYEN          **
 ***************************************/
 
-@media screen and (min-width: 600px) and  (max-width: 1037px) {
 
-  ul {
-
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    
-    li {
-    
-      .link {
-        --fill-color: #FFB8CE;
-        position: relative;
-        display: block;
-        padding: 4px 0;
-        font: 700 1.5rem Raleway, sans-serif;
-        text-decoration: none;
-        text-transform: uppercase;
-        -webkit-text-stroke: 2px var(--fill-color);
-        background: linear-gradient(var(--fill-color) 0 100%) left / 0 no-repeat;
-        color: transparent;
-        background-clip: text;
-        transition: 0.5s linear;
-      }
-    }
-  } 
-
-}
 
 /*******************************************
 **            POUR PETIT ECRAN            **
 *******************************************/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1037px) {
 
 /* hamburger */
 .checkbox {
@@ -209,7 +182,7 @@ export default {
   position: fixed;
   top: 5.5vh; 
   right: 5.5vw; 
-  background-image: radial-gradient(#FFC7D8, #fcb0c9);
+  background-image: radial-gradient(#CA7C5C, #C89F9C);
   z-index: 1000;
 
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);

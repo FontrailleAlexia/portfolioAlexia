@@ -51,6 +51,7 @@ export default {
   display: flex;
   font-size: 1.5rem;
   justify-content: space-around;
+  width: 100%;
 }
 
 .txt_footer_gmail, .txt_footer_phone, .txt_footer_copyright {

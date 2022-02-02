@@ -98,6 +98,7 @@ export default {
 }
 
 .img_presentation {
+  width: 250px;
   border-radius: 50%;
   border: solid 2px #CA7C5C;
   

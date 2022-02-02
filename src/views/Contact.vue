@@ -7,30 +7,75 @@
     </p>
 
     <div class="container">
-      <form >
-        <input type="text" name="lastname" placeholder="Nom">
-        <input type="text" name="firstname" placeholder="Prénom">
-        <input type="email" name="mail" placeholder="Email">
-        <input type="textarea" name="message" placeholder="Message" class="box_textarea">
+      <form @submit.prevent="sendEmail">
+        <input 
+          type="text" 
+          v-model="lastname"
+          name="lastname" 
+          placeholder="Nom" 
+        >
+        <input 
+          type="text" 
+          v-model="firstname"
+          name="firstname" 
+          placeholder="Prénom" 
+        >
+        <input 
+          type="email" 
+          v-model="email"
+          name="email" 
+          placeholder="Email" 
+        >
+        <textarea 
+          name="message" 
+          v-model="message"
+          placeholder="Message" 
+          class="box_textarea" >
+        </textarea>
 
-        <input type="button" value="Envoyer"><br>
+        <input type="submit" value="Envoyer"><br>
       </form>
-
-      <div class="drops">
-        <div class="drop drop-1"></div>
-        <div class="drop drop-2"></div>
-        <div class="drop drop-3"></div>
-        <div class="drop drop-4"></div>
-        <div class="drop drop-5"></div>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
+import emailjs from 'emailjs-com';
 
 export default {
   name: 'Contact',
+  data() {
+    return {
+      lastname: '',
+      firstname: '',
+      email: '',
+      message: ''
+    }
+  },
+  methods: {
+    sendEmail(e) {
+      try {
+        emailjs.sendForm(
+          'service_s7t77hu', 
+          'template_z6hrqxd', 
+          e.target,
+          'user_9QL1W10ELTyaYVu1ICRjE', {
+            lastname: this.lastname,
+            firstname: this.firstname,
+            email: this.email,
+            message: this.message
+        })
+
+      } catch(error) {
+          console.log({error})
+      }
+      // Reset form field
+      this.lastname = ''
+      this.firstname = ''
+      this.email = ''
+      this.message = ''
+    },
+  }
 }
 </script>
 
@@ -59,6 +104,10 @@ export default {
 ************************************/
 $white: rgba(255, 255, 255, 0.3);
 
+.box_textarea {
+  height: 6rem;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -70,7 +119,7 @@ form {
   flex-direction: column;
   align-items: center;
   padding: 1em;
-  height: 320px;
+  height: 360px;
   border-radius: 20px;
   border-left: 1px solid $white;
   border-top: 1px solid $white;
@@ -93,6 +142,14 @@ form {
   }
   
   input {
+    border-radius: 5000px;
+  }
+
+  textarea {
+    border-radius: 25px;
+  }
+  
+  input, textarea {
     background: transparent;
     width: 200px;
     padding: 1em;
@@ -100,7 +157,6 @@ form {
     border: none;
     border-left: 1px solid $white;
     border-top: 1px solid $white;
-    border-radius: 5000px;
     backdrop-filter: blur(5px);
     box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
     color: #fff;
@@ -153,55 +209,6 @@ form {
 
 .box_container {
   width: 500px;
-}
-
-.drop {
-  background: $white;
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  border-left: 1px solid $white;
-  border-top: 1px solid $white;
-  box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
-  position: absolute;
-  transition: all 0.2s ease;
-  
-  &-1 {
-    height: 80px;
-    width: 80px;
-    top: -20px;
-    left: -40px;
-    z-index: -1;
-  }
-  
-  &-2 {
-    height: 80px;
-    width: 80px;
-    bottom: -30px;
-    right: -10px;
-  }
-  
-  &-3 {
-    height: 100px;
-    width: 100px;
-    bottom: 120px;
-    right: -50px;
-    z-index: -1;
-  }
-  
-  &-4 {
-    height: 120px;
-    width: 120px;
-    top: -60px;
-    right: -60px;
-  }
-  
-  &-5 {
-    height: 60px;
-    width: 60px;
-    bottom: 170px;
-    left: 90px;
-    z-index: -1;
-  }
 }
 
 input:focus,

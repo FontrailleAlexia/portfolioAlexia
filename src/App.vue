@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Navbar from "./components/Navbar.vue";
+import Navbar from "./components/Navbar.vue"; 
 import Home from "./views/Home.vue";
 import Realisation from "./views/Realisation.vue";
 import Competences from "./views/Competences.vue";

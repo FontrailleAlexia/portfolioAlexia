@@ -1,179 +1,50 @@
 <template>
-    <div class="navbar">
-        <input type="checkbox" id="navi-toggle" class="checkbox" />
-        <label v-on:click="toggleMenu" for="navi-toggle" class="button" >
-            <span class="icon">&nbsp;</span>
-        </label>
-        <div class="background">&nbsp;</div>
-        <nav :class="revele === true ?  'actived' : 'nav' ">
-            <ul class="list">
-            <li v-on:click="toggleMenu" class="item"><router-link class="link" to="/">Accueil</router-link></li>
-            <li v-on:click="toggleMenu" class="item"><router-link class="link" to="/presentation#presentation" >Présentation</router-link></li>
-            <li v-on:click="toggleMenu" class="item"><router-link class="link" to="/realisation#realisation">Réalisation</router-link></li>
-            <li v-on:click="toggleMenu" class="item"><router-link class="link" to="/competences#competences">Compétences</router-link></li>
-            <li v-on:click="toggleMenu" class="item"><router-link class="link" to="/contact#contact">Contact</router-link></li>
-            </ul>
-        </nav>
+  <div class="menu_wrapper">
+    <p>Logo</p>
+    <div
+      :class="revele === false ? 'nav_burger-icon' : 'nav_burger-icon--open'"
+      v-on:click="toggleMenu"
+    >
+      <span className="line1"></span>
+      <span className="line2"></span>
+      <span className="line3"></span>
     </div>
+    
+    <div :class="revele === true ?  'actived' : 'header_nav-mobile' ">
+      <ul>
+        <li v-on:click="toggleMenu" class="item">
+          <router-link class="link" to="/">Accueil</router-link>
+        </li>
+        <li v-on:click="toggleMenu" class="item">
+          <router-link class="link" to="/presentation#presentation"
+            >Présentation</router-link
+          >
+        </li>
+        <li v-on:click="toggleMenu" class="item">
+          <router-link class="link" to="/realisation#realisation"
+            >Réalisation</router-link
+          >
+        </li>
+        <li v-on:click="toggleMenu" class="item">
+          <router-link class="link" to="/competences#competences"
+            >Compétences</router-link
+          >
+        </li>
+        <li v-on:click="toggleMenu" class="item">
+          <router-link class="link" to="/contact#contact">Contact</router-link>
+        </li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-    name: "MenuBurger", 
-    props: ["revele", "toggleMenu"],
-}
+  name: "MenuBurger",
+  props: ["revele", "toggleMenu"],
+};
 </script>
 
 <style lang="scss" scoped>
-
-/* hamburger */
-.checkbox {
-  display: none;
-}
-
-.button {
-  position: relative;
-  background-color: white;
-  height: 5rem;
-  width: 5rem;
-  border-radius: 50%;
-  position: fixed;
-  top: 5vh; 
-  right: 5vw; 
-  z-index: 2000;
-  box-shadow: 0 1rem 3rem black;
-  text-align: center; 
-  cursor: pointer;
-}
-
-.background {
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  position: fixed;
-  top: 5.5vh; 
-  right: 5.5vw; 
-  background-image: radial-gradient(#CA7C5C, #C89F9C);
-  z-index: 1000;
-
-  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-}
-.nav {
-    display: none;
-}
-.actived {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: -60vw;
-  z-index: 1500;
-  opacity: 0;
-  width: 0;
-  transition: all 0.8s;
-}
-
-.list {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  list-style: none;
-  text-align: center;
-  width: 100%;
-}
-
-.item {
-  margin: 1rem;
-  font-size: 36px;
-}
-
-.link:link,
-.link:visited {
-  display: inline-block;
-  font-family: Raleway, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 300;
-  padding: 1rem 2rem;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  background-image: linear-gradient(
-    120deg,
-    transparent 0%,
-    transparent 50%,
-    white 50%
-  );
-  background-size: 220%;
-  transition: all 0.4s;
-}
-
-.link:hover,
-.link:active {
-  color: black;
-  cursor: pointer;
-}
-
-/* functionality */
-.checkbox:checked ~ .background {
-  transform: scale(80);
-}
-.checkbox:checked ~ .nav {
-  opacity: 1;
-  width: 100%;
-  right: 0;
-}
-
-/*  */
-/* styling hamb ICON */
-.icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.icon,
-.icon::before,
-.icon::after {
-  width: 3rem;
-  height: 2px;
-  background-color: gray;
-  display: inline-block;
-}
-
-.icon::before,
-.icon::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  transition: all 0.2s;
-}
-
-.icon::before {
-  top: -0.8rem;
-}
-.icon::after {
-  top: 0.8rem;
-}
-
-.button:hover icon:before {
-  top: -1rem;
-}
-.button:hover icon::after {
-  top: 1rem;
-}
-
-.checkbox:checked + .button .icon {
-  background-color: transparent;
-}
-
-.checkbox:checked + .button .icon::before {
-  top: 0;
-  transform: rotate(135deg);
-}
-.checkbox:checked + .button .icon::after {
-  top: 0;
-  transform: rotate(-135deg);
-}
-
+@import "./menuBurger.scss";
 </style>

@@ -1,10 +1,6 @@
 <template>
   <div class="contact" id="contact">
-    <PDFViewer
-      :source="url"
-      style="height: 100vh; width: 100vw"
-      @download="handleDownload"
-    />
+
     <p class="contact_text">
       <font-awesome-icon icon="fa-solid fa-bookmark" class="fabookmark" />
       Contact
@@ -42,12 +38,12 @@
 
 <script>
 import emailjs from "emailjs-com";
-import PDFViewer from 'pdf-viewer-vue';
+
 
 export default {
   name: "Contact",
   components: {
-    PDFViewer,
+    //
   },
   data() {
     return {

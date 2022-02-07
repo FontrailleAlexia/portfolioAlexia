@@ -33,9 +33,14 @@
         <li v-on:click="toggleMenu" class="item">
           <router-link class="link" to="/contact#contact">Contact</router-link>
         </li>
+        <li v-on:click="toggleMenu" class="item">
+          <router-link class="link" :to="{name: 'CV' }">Contact</router-link>
+        </li>
       </ul>
     </div>
+   
   </div>
+  
 </template>
 
 <script>
@@ -46,5 +51,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./menuBurger.scss";
+@import "../assets/sass/Nav/menuBurger.scss";
 </style>

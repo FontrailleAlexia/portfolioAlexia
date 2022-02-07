@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import CV from '../views/CV.vue';
+import CV from '../views/CV';
 
 Vue.use(VueRouter);
 
@@ -44,7 +44,7 @@ export default new VueRouter({
         if (to.hash === '#contact') {
           position.offset = { y: 100 }
         }
-  
+
         // bypass #1number check
         if (document.querySelector(to.hash)) {
           return position

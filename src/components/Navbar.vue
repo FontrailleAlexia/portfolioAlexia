@@ -3,12 +3,12 @@
     <div class="navbar">
       <nav class="nav">
         <ul class="list">
-          <li class="item"><router-link class="link" to="/">Accueil</router-link></li>
+          <li class="item"><router-link class="link" exact to="/">Accueil</router-link></li>
           <li class="item"><router-link class="link" to="/presentation#presentation" >Présentation</router-link></li>
           <li class="item"><router-link class="link" to="/realisation#realisation">Réalisation</router-link></li>
           <li class="item"><router-link class="link" to="/competences#competences">Compétences</router-link></li>
           <li class="item"><router-link class="link" to="/contact#contact">Contact</router-link></li>
-          <li class="item"><router-link class="link" to="/CV">CV</router-link></li>
+          <li><router-link class="link" :to="{name: 'CV' }">CV</router-link></li>
         </ul>
       </nav>
     </div>
@@ -49,5 +49,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import "./navBar.scss";
+@import "../assets/sass/Nav/navBar.scss";
 </style>

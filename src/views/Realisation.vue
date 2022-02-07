@@ -21,29 +21,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
-.realisation {
-  background-color: #EED7C5;
-  font-size: 50px;
-  padding: 30px; 
-
-  p {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Dosis', sans-serif;
-    padding-bottom: 2rem;
-
-    .fabookmark {
-      color: #B36A5E;
-    }
-  }
-}
-
-.img_portfolio {
-  width: 50%;
-
-  &:hover {
-    box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
-  }
-}
+@import "../assets/sass/Realisation/realisation.scss";
 </style>

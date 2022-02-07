@@ -1,89 +1,91 @@
 <template>
   <div class="contact" id="contact">
-      <pdf src="./CVAlexia.pdf" @num-pages="pageCount = $event" @page-loaded="currentPage = $event"></pdf>
-      <p class="contact_text">
-      <font-awesome-icon icon="fa-solid fa-bookmark" class="fabookmark"/> 
-        Contact 
-      <font-awesome-icon icon="fa-solid fa-bookmark" class="fabookmark"/>
+    <PDFViewer
+      :source="url"
+      style="height: 100vh; width: 100vw"
+      @download="handleDownload"
+    />
+    <p class="contact_text">
+      <font-awesome-icon icon="fa-solid fa-bookmark" class="fabookmark" />
+      Contact
+      <font-awesome-icon icon="fa-solid fa-bookmark" class="fabookmark" />
     </p>
 
     <div class="container">
       <form @submit.prevent="sendEmail">
-        <input 
-          type="text" 
+        <input
+          type="text"
           v-model="lastname"
-          name="lastname" 
-          placeholder="Nom" 
-        >
-        <input 
-          type="text" 
+          name="lastname"
+          placeholder="Nom"
+        />
+        <input
+          type="text"
           v-model="firstname"
-          name="firstname" 
-          placeholder="Prénom" 
-        >
-        <input 
-          type="email" 
-          v-model="email"
-          name="email" 
-          placeholder="Email" 
-        >
-        <textarea 
-          name="message" 
+          name="firstname"
+          placeholder="Prénom"
+        />
+        <input type="email" v-model="email" name="email" placeholder="Email" />
+        <textarea
+          name="message"
           v-model="message"
-          placeholder="Message" 
-          class="box_textarea" >
+          placeholder="Message"
+          class="box_textarea"
+        >
         </textarea>
 
-        <input type="submit" value="Envoyer"><br>
+        <input type="submit" value="Envoyer" /><br />
       </form>
     </div>
   </div>
 </template>
 
 <script>
-import emailjs from 'emailjs-com';
-import pdf from 'vue-pdf';
+import emailjs from "emailjs-com";
+import PDFViewer from 'pdf-viewer-vue';
 
 export default {
-  name: 'Contact',
+  name: "Contact",
   components: {
-    pdf
+    PDFViewer,
   },
   data() {
     return {
-      lastname: '',
-      firstname: '',
-      email: '',
-      message: '',
+      lastname: "",
+      firstname: "",
+      email: "",
+      message: "",
       currentPage: 0,
-			pageCount: 0,
-    }
+      pageCount: 0,
+      url: '<./CVAlexia.pdf>',
+    };
   },
   methods: {
     sendEmail(e) {
       try {
         emailjs.sendForm(
-          'service_s7t77hu', 
-          'template_z6hrqxd', 
+          "service_s7t77hu",
+          "template_z6hrqxd",
           e.target,
-          'user_9QL1W10ELTyaYVu1ICRjE', {
+          "user_9QL1W10ELTyaYVu1ICRjE",
+          {
             lastname: this.lastname,
             firstname: this.firstname,
             email: this.email,
-            message: this.message
-        })
-
-      } catch(error) {
-          console.log({error})
+            message: this.message,
+          }
+        );
+      } catch (error) {
+        console.log({ error });
       }
       // Reset form field
-      this.lastname = ''
-      this.firstname = ''
-      this.email = ''
-      this.message = ''
-    }
-  }
-}
+      this.lastname = "";
+      this.firstname = "";
+      this.email = "";
+      this.message = "";
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -92,16 +94,16 @@ export default {
 }
 
 .contact {
-  background-color: #EED7C5;
+  background-color: #eed7c5;
   font-size: 50px;
-  padding: 30px; 
+  padding: 30px;
 
   p {
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Dosis', sans-serif;
+    font-family: "Dosis", sans-serif;
     .fabookmark {
-      color: #B36A5E;
+      color: #b36a5e;
     }
   }
 }
@@ -136,8 +138,8 @@ form {
   position: relative;
   transition: all 0.2s ease-in-out;
   width: 300px;
-  background: linear-gradient(45deg, #CA7C5C, #C89F9C);
-  
+  background: linear-gradient(45deg, #ca7c5c, #c89f9c);
+
   p {
     font-weight: 500;
     color: #fff;
@@ -145,13 +147,13 @@ form {
     font-size: 1.4rem;
     margin-top: 0;
     margin-bottom: 60px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   input[type="submit"] {
     cursor: pointer;
   }
-  
+
   input {
     border-radius: 5000px;
   }
@@ -159,8 +161,9 @@ form {
   textarea {
     border-radius: 25px;
   }
-  
-  input, textarea {
+
+  input,
+  textarea {
     background: transparent;
     width: 200px;
     padding: 1em;
@@ -169,43 +172,42 @@ form {
     border-left: 1px solid $white;
     border-top: 1px solid $white;
     backdrop-filter: blur(5px);
-    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
     color: black;
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     transition: all 0.2s ease-in-out;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
     &:hover {
-      background: rgba(255,255,255,0.1);
-      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
     }
-    
+
     &[type="email"],
     &[type="text"],
-    &[type="textarea"]
-    {
+    &[type="textarea"] {
       &:focus {
-        background: rgba(255,255,255,0.1);
-        box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
       }
     }
-    
+
     &[type="button"] {
       margin-top: 10px;
       width: 150px;
       font-size: 1rem;
-      
+
       &:hover {
         cursor: pointer;
       }
-      
+
       &:active {
-        background: rgba(255,255,255,0.2);
+        background: rgba(255, 255, 255, 0.2);
       }
     }
   }
-  
+
   &:hover {
     margin: 4px;
   }
@@ -215,7 +217,7 @@ form {
   font-family: Montserrat, sans-serif;
   font-weight: 400;
   color: black;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .box_container {
@@ -225,6 +227,6 @@ form {
 input:focus,
 textarea:focus,
 button:focus {
-    outline: none;
+  outline: none;
 }
 </style>

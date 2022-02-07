@@ -16,21 +16,12 @@
     "axios": "^0.24.0",
     "core-js": "^3.21.0",
     "emailjs-com": "^3.2.0",
-    "jspdf": "^2.5.1",
-    "pdf-viewer": "^0.8.1",
-    "pdf-viewer-vue": "^0.2.7",
-    "pdfjs-dist": "^2.12.313",
-    "pdfvuer": "^2.0.1",
     "vue": "^2.6.11",
     "vue-pdf": "^4.3.0",
     "vue-router": "^3.2.0",
     "vuetify": "^2.6.3",
     "vuex": "^3.6.2",
-<<<<<<< HEAD
-    "webpack": "^5.68.0"
-=======
     "webpack": "^4.46.0"
->>>>>>> 1df54946cb0399e5bda58cc5f49088211d28c32c
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

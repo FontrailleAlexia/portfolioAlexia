@@ -1,6 +1,6 @@
 <template>
   <div class="contact" id="contact">
-
+ 
     <p class="contact_text">
       <font-awesome-icon icon="fa-solid fa-bookmark" class="fabookmark" />
       Contact
@@ -43,11 +43,7 @@ import emailjs from "emailjs-com";
 export default {
   name: "Contact",
   components: {
-<<<<<<< HEAD
     //
-=======
-    
->>>>>>> 1df54946cb0399e5bda58cc5f49088211d28c32c
   },
   data() {
     return {

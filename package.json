@@ -26,7 +26,11 @@
     "vue-router": "^3.2.0",
     "vuetify": "^2.6.3",
     "vuex": "^3.6.2",
+<<<<<<< HEAD
     "webpack": "^5.68.0"
+=======
+    "webpack": "^4.46.0"
+>>>>>>> 1df54946cb0399e5bda58cc5f49088211d28c32c
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

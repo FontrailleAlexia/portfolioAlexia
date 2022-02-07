@@ -43,7 +43,11 @@ import emailjs from "emailjs-com";
 export default {
   name: "Contact",
   components: {
+<<<<<<< HEAD
     //
+=======
+    
+>>>>>>> 1df54946cb0399e5bda58cc5f49088211d28c32c
   },
   data() {
     return {
@@ -53,7 +57,7 @@ export default {
       message: "",
       currentPage: 0,
       pageCount: 0,
-      url: '<./CVAlexia.pdf>',
+      url: './CVAlexia.pdf',
     };
   },
   methods: {

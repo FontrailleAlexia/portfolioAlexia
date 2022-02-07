@@ -1,6 +1,7 @@
 <template>
   <div class="contact" id="contact">
-    <p class="contact_text">
+      <pdf src="./CVAlexia.pdf" @num-pages="pageCount = $event" @page-loaded="currentPage = $event"></pdf>
+      <p class="contact_text">
       <font-awesome-icon icon="fa-solid fa-bookmark" class="fabookmark"/> 
         Contact 
       <font-awesome-icon icon="fa-solid fa-bookmark" class="fabookmark"/>
@@ -41,15 +42,21 @@
 
 <script>
 import emailjs from 'emailjs-com';
+import pdf from 'vue-pdf';
 
 export default {
   name: 'Contact',
+  components: {
+    pdf
+  },
   data() {
     return {
       lastname: '',
       firstname: '',
       email: '',
-      message: ''
+      message: '',
+      currentPage: 0,
+			pageCount: 0,
     }
   },
   methods: {
@@ -74,7 +81,7 @@ export default {
       this.firstname = ''
       this.email = ''
       this.message = ''
-    },
+    }
   }
 }
 </script>

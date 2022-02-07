@@ -40,8 +40,10 @@ export default {
 }
 
 .img_portfolio {
+  width: 50%;
+
   &:hover {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
   }
 }
 </style>

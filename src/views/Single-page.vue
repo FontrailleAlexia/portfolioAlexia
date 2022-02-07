@@ -1,13 +1,14 @@
 <template>
   
     <div id="nav">
+     
       <Navbar />
       <Home />
       <Realisation />
       <Competences />
       <Contact />
       <Footer />
-       <router-view />
+      
     </div>
    
 
@@ -22,6 +23,7 @@ import Contact from "./Contact.vue";
 import Footer from "../components/Footer.vue";
 
 
+
 export default {
   name: "SinglePage",
   components: {
@@ -31,7 +33,7 @@ export default {
     Competences,
     Contact,
     Footer,
-
+  
   },
 };
 </script>

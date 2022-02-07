@@ -8,7 +8,7 @@
           <li class="item"><router-link class="link" to="/realisation#realisation">Réalisation</router-link></li>
           <li class="item"><router-link class="link" to="/competences#competences">Compétences</router-link></li>
           <li class="item"><router-link class="link" to="/contact#contact">Contact</router-link></li>
-          <li><router-link class="link" :to="{name: 'CV' }">CV</router-link></li>
+          <li><router-link class="link" to="/cv" >CV</router-link></li>
         </ul>
       </nav>
     </div>

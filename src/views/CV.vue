@@ -1,8 +1,7 @@
 <template>
   <div id="CV">
-    <router-view>
-      <pdf src="/CVAlexia.pdf"></pdf>
-    </router-view>
+    <pdf src="/CVAlexia.pdf"></pdf>
+    <router-view name="CV"></router-view>
   </div>
 </template>
 

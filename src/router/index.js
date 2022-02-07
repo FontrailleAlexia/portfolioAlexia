@@ -1,18 +1,24 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import CV from '../views/CV';
+import Cv from '../views/CV';
+import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/CV',
+    path: '/',
+    name: 'home',
+    component: Home,
+  },
+  {
+    path: '/cv',
     name: 'CV',
-    component: CV
+    component: Cv,
   },
 ]
 
-export default new VueRouter({
+const router = new VueRouter({
   mode: "history",
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
@@ -58,3 +64,5 @@ export default new VueRouter({
   },
   routes
 })
+
+export default router

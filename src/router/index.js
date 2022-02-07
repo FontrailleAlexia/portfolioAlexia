@@ -1,7 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import CV from '../views/CV.vue';
 
 Vue.use(VueRouter);
+
+const routes = [
+  {
+    path: '/CV',
+    name: 'CV',
+    component: CV
+  },
+]
 
 export default new VueRouter({
   mode: "history",
@@ -47,5 +56,5 @@ export default new VueRouter({
       }
     }
   },
-  
+  routes
 })

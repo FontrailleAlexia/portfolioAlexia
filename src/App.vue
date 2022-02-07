@@ -8,6 +8,8 @@
       <Competences />
       <Contact />
 
+      <CV />
+
       <Footer />
       <Reset />
     </div>
@@ -21,9 +23,9 @@ import Home from "./views/Home.vue";
 import Realisation from "./views/Realisation.vue";
 import Competences from "./views/Competences.vue";
 import Contact from "./views/Contact.vue";
+import CV from "./views/CV.vue";
+
 import Footer from "./components/Footer.vue";
-
-
 
 import Reset from "./assets/css/reset.css";
 
@@ -36,6 +38,7 @@ export default {
       Realisation,
       Competences,
       Contact,
+      CV,
       Footer,
       Reset
     }

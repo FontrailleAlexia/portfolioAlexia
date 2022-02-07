@@ -1,6 +1,5 @@
 <template>
   <div class="contact" id="contact">
- 
     <p class="contact_text">
       <font-awesome-icon icon="fa-solid fa-bookmark" class="fabookmark" />
       Contact
@@ -39,21 +38,14 @@
 <script>
 import emailjs from "emailjs-com";
 
-
 export default {
   name: "Contact",
-  components: {
-    //
-  },
   data() {
     return {
       lastname: "",
       firstname: "",
       email: "",
-      message: "",
-      currentPage: 0,
-      pageCount: 0,
-      url: './CVAlexia.pdf',
+      message: ""
     };
   },
   methods: {

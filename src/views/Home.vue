@@ -1,5 +1,5 @@
 <template>
-  <div class="home" id="home">
+  <div class="home" id="presentation">
     <p>
       <font-awesome-icon icon="fa-solid fa-bookmark" class="fabookmark"/> 
         A propos 
@@ -38,6 +38,8 @@ export default {
 <style scoped lang="scss">
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import "src/assets/sass/_variable.scss";
+@import "src/assets/sass/_mixins.scss";
 
 @media screen and (max-width: 1037px) {
   .presentation_txt_img {
@@ -71,7 +73,7 @@ export default {
 
 .presentation_txt_img {
   display: flex;
-  margin: 0 10rem;
+  align-items: center;
 }
 
 .text_presentation {
@@ -80,12 +82,10 @@ export default {
   justify-content: center;
   align-items: center;
   align-items: center;
-  margin: 0 4rem 0 0;
   border: solid 2px black;
   border-radius: 2rem;
   height: 100%;
   padding: 2rem;
- 
 
   &:hover {
     box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
@@ -101,6 +101,10 @@ export default {
   width: 250px;
   border-radius: 50%;
   border: solid 2px #CA7C5C;
+  margin-left: 4rem;
+  @include for-phone-and-tablet-only {
+    margin-left: 0;
+  }
   
   &:hover {
     box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);

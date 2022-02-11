@@ -1,9 +1,24 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Cv from '../views/CV';
+import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
-export default new VueRouter({
+const routes = [
+  {
+    path: '/',
+    name: 'home',
+    component: Home,
+  },
+  {
+    path: '/cv',
+    name: 'CV',
+    component: Cv,
+  },
+]
+
+const router = new VueRouter({
   mode: "history",
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
@@ -35,7 +50,7 @@ export default new VueRouter({
         if (to.hash === '#contact') {
           position.offset = { y: 100 }
         }
-  
+
         // bypass #1number check
         if (document.querySelector(to.hash)) {
           return position
@@ -47,5 +62,7 @@ export default new VueRouter({
       }
     }
   },
-  
+  routes
 })
+
+export default router

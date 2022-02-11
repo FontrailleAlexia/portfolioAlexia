@@ -1,9 +1,9 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
 
 /* import the fontawesome core */
-import { library } from '@fortawesome/fontawesome-svg-core'
+import { library } from '@fortawesome/fontawesome-svg-core';
 
 /* import specific icons */
 import { faBookmark, faEnvelope, faPhone, faCopyright } from '@fortawesome/free-solid-svg-icons'

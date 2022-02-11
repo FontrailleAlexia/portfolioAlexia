@@ -1,50 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <Navbar />
-
-      <Home />
-      <Realisation />
-      <Competences />
-      <Contact />
-
-      <Footer />
-      <Reset />
-    </div>
-    <router-view/>
+    <SinglePage />
   </div>
 </template>
 
 <script>
-import Navbar from "./components/Navbar.vue";
-import Home from "./views/Home.vue";
-import Realisation from "./views/Realisation.vue";
-import Competences from "./views/Competences.vue";
-import Contact from "./views/Contact.vue";
-import Footer from "./components/Footer.vue";
-
-
-
-import Reset from "./assets/css/reset.css";
-
+import SinglePage from "./views/Single-page.vue";
 
 export default {
-    name: "App",
-    components: {
-      Navbar,
-      Home,
-      Realisation,
-      Competences,
-      Contact,
-      Footer,
-      Reset
-    }
-}
-
+  name: "App",
+  components: {
+    SinglePage,
+  },
+};
 </script>
 
 <style lang="scss">
-
-
-
+@import "./assets/sass/Utils/reset.scss";
 </style>

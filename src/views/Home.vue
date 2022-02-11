@@ -1,5 +1,5 @@
 <template>
-  <div class="home" id="home">
+  <div class="home" id="presentation">
     <p>
       <font-awesome-icon icon="fa-solid fa-bookmark" class="fabookmark"/> 
         A propos 
@@ -37,81 +37,5 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
-
-@media screen and (max-width: 1037px) {
-  .presentation_txt_img {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-top: 0;
-  }
-}
-
-.home {
-  background-color: #C89F9C;
-  font-size: 50px;
-  padding: 30px;
-
-  p {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Dosis', sans-serif;
-    margin-bottom: 3rem;
-    .fabookmark {
-      color: #B36A5E;
-    }
-  }
-}
-
-.presentation {
-  background-color: #FFC7D8;
-  padding-bottom: 2rem;
-  padding-top: 1rem;
-}
-
-.presentation_txt_img {
-  display: flex;
-  margin: 0 10rem;
-}
-
-.text_presentation {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-items: center;
-  margin: 0 4rem 0 0;
-  border: solid 2px black;
-  border-radius: 2rem;
-  height: 100%;
-  padding: 2rem;
- 
-
-  &:hover {
-    box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
-  }
-
-  p {
-    font-size: 20px;
-    padding-bottom: 10px;
-  }
-}
-
-.img_presentation {
-  width: 250px;
-  border-radius: 50%;
-  border: solid 2px #CA7C5C;
-  
-  &:hover {
-    box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
-  }
-}
-
-h1 {
-  margin-top: 1.5rem;
-  text-align: center;
-  font-size: 40px;
-  font-weight: bold;
-  padding-bottom: 1rem;
-}
+@import "../assets/sass/Home/home.scss";
 </style>

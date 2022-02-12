@@ -1,22 +1,23 @@
+@import "src/assets/sass/Utils/_variable.scss";
+@import "src/assets/sass/Utils/_mixins.scss";
 /* font-family */
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 
-/*********************************** 
-**        POUR GRAND ECRAN        ** 
-************************************/
-
-@media screen and (min-width: 1027px) {
-  .menuBurger {
+.menuBurger,
+.checkbox {
+  @include for-large-navbar {
     display: none;
   }
+}
 
-  .checkbox {
-    display: none;
-  }
+img {
+  width: 80px;
+}
 
-  .navbar {
+.navbar {
+  @include for-large-navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     padding-top: 2em;
@@ -27,16 +28,25 @@
     z-index: 1;
     background-color: #ca7c5c;
   }
+  @include for-small-navbar {
+    display: none;
+  }
+}
 
-  ul {
+ul {
+  @include for-large-navbar {
     display: flex;
     flex-direction: row;
     list-style-type: none;
+  }
 
-    li {
+  li {
+    @include for-large-navbar {
       padding: 2rem 1rem;
+    }
 
-      .link {
+    .link {
+      @include for-large-navbar {
         --fill-color: #eed7c5;
         position: relative;
         display: block;
@@ -58,19 +68,23 @@
   }
 }
 
-/**********************************/
-
-@media screen and (max-width: 1027px) {
-  .nav {
-    display: none;
-  }
-}
-
 #cv {
   padding: 0.5rem;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 5px;
+  right: 5px;
+
+  a {
+    text-decoration: none;
+
+    &:visited {
+      color: blue;
+    }
+
+    &:focus {
+      color: red;
+    }
+  }
 }
 
 .navbar_title {
@@ -90,6 +104,10 @@
     border: white 1px solid;
     text-align: center;
     padding: 30px;
+
+    @include for-phone-only {
+      border: white 0 solid;
+    }
   }
 
   p {

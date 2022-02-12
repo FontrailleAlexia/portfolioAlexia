@@ -1,10 +1,15 @@
 <template>
-  <div class="up">
+  <div class="up" id="accueil">
     <div class="navbar">
-      <nav class="nav">
+      <div class="logo">
+        <img src="../assets/img/logo-large.png" alt="" />
+      </div>
+      <div class="list_nav">
         <ul class="list">
           <li class="item">
-            <router-link class="link" exact to="/">Accueil</router-link>
+            <router-link class="link" exact to="/accueil#accueil"
+              >Accueil</router-link
+            >
           </li>
           <li class="item">
             <router-link class="link" to="/presentation#presentation"
@@ -28,11 +33,15 @@
           </li>
           <li class="item">
             <button id="cv">
-              <a href="./CVFontrailleAlexia.pdf"  download="CV Fontraille Alexia.pdf">Télécharger mon CV</a>
+              <a
+                href="./CVFontrailleAlexia.pdf"
+                download="CV Fontraille Alexia.pdf"
+                >Télécharger mon CV</a
+              >
             </button>
           </li>
         </ul>
-      </nav>
+      </div>
     </div>
 
     <div class="menuBurger">
@@ -65,7 +74,6 @@ export default {
     toggleMenu: function () {
       this.revele = !this.revele;
     },
-
   },
 };
 </script>

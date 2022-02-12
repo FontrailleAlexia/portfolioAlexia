@@ -30,6 +30,11 @@ const router = new VueRouter({
       // scroll to anchor by returning the selector
       if (to.hash) {
         position.selector = to.hash
+
+        // specify offset of the element
+        if (to.hash === '#accueil') {
+          position.offset = { y: 100 }
+        }
   
         // specify offset of the element
         if (to.hash === '#presentation') {

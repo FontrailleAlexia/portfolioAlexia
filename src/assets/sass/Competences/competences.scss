@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+@import "src/assets/sass/Utils/_variable.scss";
+@import "src/assets/sass/Utils/_mixins.scss";
 
 .competences {
   background-color: #c89f9c;
@@ -28,6 +30,14 @@
     align-items: center;
     width: 75%;
     margin-top: 2rem;
+
+    .skill--picture {
+      @include for-phone-only {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
 
     .competences--tab {
       display: flex;

@@ -19,7 +19,7 @@
     }
   }
   @mixin for-tablet-landscape-up {
-    @media (min-width: 900px) {
+    @media (min-width: 1027px) {
       @content;
     }
   }
@@ -44,3 +44,14 @@
     }
   }
   
+  @mixin for-large-navbar {
+    @media (min-width: 1027px) {
+      @content;
+    }
+  }
+
+  @mixin for-small-navbar {
+    @media (max-width: 1027px) {
+      @content;
+    }
+  }

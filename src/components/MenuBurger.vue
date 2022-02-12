@@ -1,6 +1,6 @@
 <template>
   <div class="menu_wrapper">
-    <p>Logo</p>
+    <img src="../assets/img/logo-small.png" alt="">
     <div
       :class="revele === false ? 'nav_burger-icon' : 'nav_burger-icon--open'"
       v-on:click="toggleMenu"
@@ -9,8 +9,8 @@
       <span className="line2"></span>
       <span className="line3"></span>
     </div>
-    
-    <div :class="revele === true ?  'actived' : 'header_nav-mobile' ">
+
+    <div :class="revele === true ? 'actived' : 'header_nav-mobile'">
       <ul>
         <li v-on:click="toggleMenu" class="item">
           <router-link class="link" to="/">Accueil</router-link>
@@ -33,14 +33,18 @@
         <li v-on:click="toggleMenu" class="item">
           <router-link class="link" to="/contact#contact">Contact</router-link>
         </li>
-        <li v-on:click="toggleMenu" class="item">
-          <router-link class="link" :to="{name: 'CV' }">Contact</router-link>
+        <li class="item">
+          <button id="cv">
+            <a
+              href="./CVFontrailleAlexia.pdf"
+              download="CV Fontraille Alexia.pdf"
+              >Télécharger mon CV</a
+            >
+          </button>
         </li>
       </ul>
     </div>
-   
   </div>
-  
 </template>
 
 <script>

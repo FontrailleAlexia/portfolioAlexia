@@ -3,12 +3,34 @@
     <div class="navbar">
       <nav class="nav">
         <ul class="list">
-          <li class="item"><router-link class="link" exact to="/">Accueil</router-link></li>
-          <li class="item"><router-link class="link" to="/presentation#presentation" >Présentation</router-link></li>
-          <li class="item"><router-link class="link" to="/realisation#realisation">Réalisation</router-link></li>
-          <li class="item"><router-link class="link" to="/competences#competences">Compétences</router-link></li>
-          <li class="item"><router-link class="link" to="/contact#contact">Contact</router-link></li>
-          <li><router-link class="link" to="/cv" >CV</router-link></li>
+          <li class="item">
+            <router-link class="link" exact to="/">Accueil</router-link>
+          </li>
+          <li class="item">
+            <router-link class="link" to="/presentation#presentation"
+              >Présentation</router-link
+            >
+          </li>
+          <li class="item">
+            <router-link class="link" to="/realisation#realisation"
+              >Réalisation</router-link
+            >
+          </li>
+          <li class="item">
+            <router-link class="link" to="/competences#competences"
+              >Compétences</router-link
+            >
+          </li>
+          <li class="item">
+            <router-link class="link" to="/contact#contact"
+              >Contact</router-link
+            >
+          </li>
+          <li class="item">
+            <button id="cv">
+              <a href="./CVFontrailleAlexia.pdf"  download="CV Fontraille Alexia.pdf">Télécharger mon CV</a>
+            </button>
+          </li>
         </ul>
       </nav>
     </div>
@@ -16,7 +38,7 @@
     <div class="menuBurger">
       <MenuBurger :revele="revele" :toggleMenu="toggleMenu"></MenuBurger>
     </div>
-  
+
     <div class="navbar_title">
       <div class="border">
         <p class="navbar_name">Alexia Fontraille</p>
@@ -30,7 +52,7 @@
 import MenuBurger from "./MenuBurger.vue";
 
 export default {
-  name: "Home", 
+  name: "Home",
   components: {
     MenuBurger,
   },
@@ -43,6 +65,7 @@ export default {
     toggleMenu: function () {
       this.revele = !this.revele;
     },
+
   },
 };
 </script>

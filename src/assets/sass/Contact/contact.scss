@@ -1,3 +1,6 @@
+@import "src/assets/sass/Utils/_variable.scss";
+@import "src/assets/sass/Utils/_mixins.scss";
+
 .contact_text {
     padding-bottom: 1rem;
   }
@@ -13,6 +16,10 @@
       font-family: "Dosis", sans-serif;
       .fabookmark {
         color: #b36a5e;
+      }
+
+      @include for-phone-only {
+        font-size: 2rem;
       }
     }
   }
@@ -48,6 +55,9 @@
     transition: all 0.2s ease-in-out;
     width: 300px;
     background: linear-gradient(45deg, #ca7c5c, #c89f9c);
+    @include for-phone-only {
+      width: 100px;
+    }
   
     p {
       font-weight: 500;
@@ -87,6 +97,10 @@
       font-weight: 500;
       transition: all 0.2s ease-in-out;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+      @include for-phone-only {
+        width: 90px;
+      }
   
       &:hover {
         background: rgba(255, 255, 255, 0.1);

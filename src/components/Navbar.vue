@@ -31,16 +31,14 @@
               >Contact</router-link
             >
           </li>
-          <li class="item">
-            <button id="cv">
-              <a
-                href="./CVFontrailleAlexia.pdf"
-                download="CV Fontraille Alexia.pdf"
-                >Télécharger mon CV</a
-              >
-            </button>
-          </li>
         </ul>
+      </div>
+      <div class="cv">
+        <button id="cv">
+          <a href="./CVFontrailleAlexia.pdf" download="CV Fontraille Alexia.pdf"
+            >Télécharger mon CV</a
+          >
+        </button>
       </div>
     </div>
 
@@ -51,7 +49,7 @@
     <div class="navbar_title">
       <div class="border">
         <p class="navbar_name">Alexia Fontraille</p>
-        <p>Développeuse web & web mobile</p>
+        <p class="navbar_job">Développeuse web & web mobile</p>
       </div>
     </div>
   </div>

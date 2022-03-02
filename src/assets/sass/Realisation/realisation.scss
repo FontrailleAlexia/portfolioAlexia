@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import "src/assets/sass/Utils/_variable.scss";
+@import "src/assets/sass/Utils/_mixins.scss";
+
 .realisation {
   background-color: #EED7C5;
   font-size: 50px;
@@ -12,6 +15,9 @@
 
     .fabookmark {
       color: #B36A5E;
+    }
+    @include for-phone-only {
+      font-size: 2rem;
     }
   }
 }

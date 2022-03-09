@@ -89,6 +89,8 @@
     textarea::placeholder {
       @include for-phone-only {
         font-size: 0.5rem;
+        
+        height: 10rem;
       }
     }
     
